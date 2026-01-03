@@ -1,6 +1,6 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
-import { ArrowRight, Building, Users, Star, CheckCircle } from 'lucide-react';
+import React from "react";
+import { NavLink } from "react-router-dom";
+import { ArrowRight, Building, Users, Star, CheckCircle, Landmark, Pyramid, PackageOpen } from "lucide-react";
 
 const HomePage = () => {
   return (
@@ -8,89 +8,22 @@ const HomePage = () => {
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center">
         <div className="absolute inset-0 z-0">
-          <img
-            src="https://images.pexels.com/photos/159306/construction-site-build-construction-work-159306.jpeg"
-            alt="Construction site"
-            className="w-full h-full object-cover"
-          />
+          <img src="https://images.pexels.com/photos/159306/construction-site-build-construction-work-159306.jpeg" alt="Construction site" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-black bg-opacity-60"></div>
         </div>
 
         <div className="relative z-10 text-center text-white px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-            <span className="text-orange-500">信頼</span>と
-            <span className="text-orange-500">品質</span>で建てる未来
+            <span className="text-orange-500">安全</span>と<span className="text-orange-500">安心</span>を守る構造設計
           </h1>
-          <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-            創業以来、お客様の理想を形にする建設サービスを提供してきました。
-            確かな技術と誠実な対応で、皆様の夢を実現します。
-          </p>
+          <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">創業以来　建物の安全、安心を守るため、確かな技術と誠実な対応で日々取り組んでおります。</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <NavLink
-              to="/about"
-              className="bg-orange-500 hover:bg-orange-600 text-white py-3 px-8 rounded-md text-lg font-medium transition-colors duration-300"
-            >
+            <NavLink to="/about" className="bg-orange-500 hover:bg-orange-600 text-white py-3 px-8 rounded-md text-lg font-medium transition-colors duration-300">
               会社について
             </NavLink>
-            <NavLink
-              to="/projects"
-              className="bg-transparent hover:bg-white hover:text-gray-900 text-white py-3 px-8 rounded-md text-lg font-medium border-2 border-white transition-colors duration-300"
-            >
+            <NavLink to="/projects" className="bg-transparent hover:bg-white hover:text-gray-900 text-white py-3 px-8 rounded-md text-lg font-medium border-2 border-white transition-colors duration-300">
               施工実績を見る
             </NavLink>
-          </div>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              私たちの強み
-            </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              長年の経験と実績に基づいた確かな技術力と細部へのこだわりで、
-              お客様の期待を超える建築物をお届けします。
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-gray-50 p-8 rounded-lg shadow-sm transition-transform duration-300 hover:transform hover:scale-105">
-              <div className="text-orange-500 mb-4">
-                <Building size={36} />
-              </div>
-              <h3 className="text-xl font-semibold mb-3 text-gray-900">
-                高品質な施工
-              </h3>
-              <p className="text-gray-600">
-                熟練の技術者による丁寧な施工と厳格な品質管理体制により、耐久性と美観を兼ね備えた建築物を実現します。
-              </p>
-            </div>
-
-            <div className="bg-gray-50 p-8 rounded-lg shadow-sm transition-transform duration-300 hover:transform hover:scale-105">
-              <div className="text-orange-500 mb-4">
-                <Users size={36} />
-              </div>
-              <h3 className="text-xl font-semibold mb-3 text-gray-900">
-                お客様第一主義
-              </h3>
-              <p className="text-gray-600">
-                お客様のニーズと予算に合わせた最適な提案と、透明性のある対応で信頼関係を構築します。
-              </p>
-            </div>
-
-            <div className="bg-gray-50 p-8 rounded-lg shadow-sm transition-transform duration-300 hover:transform hover:scale-105">
-              <div className="text-orange-500 mb-4">
-                <Star size={36} />
-              </div>
-              <h3 className="text-xl font-semibold mb-3 text-gray-900">
-                豊富な実績
-              </h3>
-              <p className="text-gray-600">
-                住宅から商業施設、公共建築物まで、様々なプロジェクトを成功に導いてきた実績があります。
-              </p>
-            </div>
           </div>
         </div>
       </section>
@@ -99,72 +32,42 @@ const HomePage = () => {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              事業内容
-            </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              {/* 設計から施工、アフターフォローまで一貫したサービスを提供しています。 */}
-              何か記載する事業内容があれば記載します。
-            </p>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">事業内容</h2>
           </div>
 
-          {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-white p-6 rounded-lg shadow-sm flex">
-              <div className="mr-4 text-orange-500">
+          <div className="grid grid-cols-3 md:grid-cols-3 gap-5">
+            <div className="bg-white p-6 rounded-lg shadow-sm flex flex-col items-center text-center">
+              <div className="mb-4 text-orange-500">
                 <CheckCircle size={24} />
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2 text-gray-900">
-                  一般建築工事
-                </h3>
-                <p className="text-gray-600">
-                  住宅、マンション、オフィスビル、商業施設など、各種建築物の新築・改修工事
-                </p>
+                <h4 className="text-xl font-semibold mb-2 text-gray-900">建築物の構造設計、監理</h4>
+                {/* <p className="text-gray-600">住宅、マンション、オフィスビル、商業施設など、各種建築物の新築・改修工事</p> */}
               </div>
             </div>
 
-            <div className="bg-white p-6 rounded-lg shadow-sm flex">
-              <div className="mr-4 text-orange-500">
+            <div className="bg-white p-6 rounded-lg shadow-sm flex flex-col items-center text-center">
+              <div className="mb-4 text-orange-500">
                 <CheckCircle size={24} />
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2 text-gray-900">
-                  土木工事
-                </h3>
-                <p className="text-gray-600">
-                  道路、橋梁、上下水道など公共インフラの整備・補修工事
-                </p>
+                <h4 className="text-xl font-semibold mb-2 text-gray-900">建築物の耐震診断、耐震補強設計</h4>
+                {/* <p className="text-gray-600">道路、橋梁、上下水道など公共インフラの整備・補修工事</p> */}
               </div>
             </div>
 
-            <div className="bg-white p-6 rounded-lg shadow-sm flex">
-              <div className="mr-4 text-orange-500">
+            <div className="bg-white p-6 rounded-lg shadow-sm flex flex-col items-center text-center">
+              <div className="mb-4 text-orange-500">
                 <CheckCircle size={24} />
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2 text-gray-900">
-                  設計・監理業務
-                </h3>
-                <p className="text-gray-600">
-                  建築物の設計から施工監理までトータルでサポート
-                </p>
+                <h4 className="text-xl font-semibold mb-2 text-gray-900">
+                  各種構造に対する<br></br>相談・調査・アドバイス
+                </h4>
+                {/* <p className="text-gray-600">建築物の設計から施工監理までトータルでサポート</p> */}
               </div>
             </div>
-
-            <div className="bg-white p-6 rounded-lg shadow-sm flex">
-              <div className="mr-4 text-orange-500">
-                <CheckCircle size={24} />
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold mb-2 text-gray-900">
-                  リフォーム・リノベーション
-                </h3>
-                <p className="text-gray-600">
-                  住宅や商業施設のリフォーム、古民家再生など
-                </p>
-              </div>
-            </div>
-          </div> */}
+          </div>
 
           {/* <div className="text-center mt-12">
             <NavLink
@@ -174,6 +77,46 @@ const HomePage = () => {
               詳しく見る <ArrowRight size={16} className="ml-1" />
             </NavLink>
           </div> */}
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">私たちの強み</h2>
+            {/* <p className="text-lg text-gray-600 max-w-3xl mx-auto">長年の経験と実績に基づいた確かな技術力と細部へのこだわりで、 お客様の期待を超える建築物をお届けします。</p> */}
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-gray-50 p-8 rounded-lg shadow-sm transition-transform duration-300 hover:transform hover:scale-105">
+              <div className="text-orange-500 mb-4">
+                <Landmark size={36} />
+              </div>
+              <h3 className="text-xl font-semibold mb-3 text-gray-900">豊富な実績</h3>
+              <p className="text-gray-600">公共建築物から民間建築物まで、</p>
+              <p className="text-gray-600">多種多様な設計を手掛けています。</p>
+            </div>
+
+            <div className="bg-gray-50 p-8 rounded-lg shadow-sm transition-transform duration-300 hover:transform hover:scale-105">
+              <div className="text-orange-500 mb-4">
+                <Pyramid size={36} />
+              </div>
+              <h3 className="text-xl font-semibold mb-3 text-gray-900">多種多様な構造に対応</h3>
+              <p className="text-gray-600">鉄骨造及び鉄筋コンクリート造並びに木構造</p>
+              <p className="text-gray-600">を含む構造種別は問いません。</p>
+            </div>
+
+            <div className="bg-gray-50 p-8 rounded-lg shadow-sm transition-transform duration-300 hover:transform hover:scale-105">
+              <div className="text-orange-500 mb-4">
+                <PackageOpen size={36} />
+              </div>
+              <h3 className="text-xl font-semibold mb-3 text-gray-900">多種多様な規模・用途に対応</h3>
+              <p className="text-gray-600">一般住宅・事務所ビル・倉庫・マンション等</p>
+              <p className="text-gray-600">高さ４５ｍ約１４階建ての建物まで対応。</p>
+              <p className="text-gray-600">宅地造成の擁壁・進入橋・看板等も手掛けています。</p>
+            </div>
+          </div>
         </div>
       </section>
 
