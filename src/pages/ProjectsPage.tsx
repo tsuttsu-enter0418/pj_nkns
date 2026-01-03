@@ -111,7 +111,7 @@ const ProjectsPage = () => {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative pt-24 pb-20 md:pt-32 md:pb-24">
+      <section className="relative pt-24 pb-32 md:pt-32 md:pb-40">
         <div className="absolute inset-0 z-0 h-2/3">
           <img src="https://images.pexels.com/photos/2760241/pexels-photo-2760241.jpeg" alt="Construction projects" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-black bg-opacity-60"></div>
