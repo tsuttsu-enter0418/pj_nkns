@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "title": "バチカンマンション新築工事",
+    "category": "residential",
+    "location": "東京都渋谷区",
+    "year": "2023",
+    "description": "地上10階建て、全30戸の高級マンション。耐震性と居住性を両立させた設計で、共用部には緑豊かな中庭を設けています。最新の省エネ技術を導入し、環境に配慮した住まいを実現しました。",
+    "images": [
+      "https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg",
+      "https://images.pexels.com/photos/1838640/pexels-photo-1838640.jpeg"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "ロマンチックオフィスビル改修工事",
+    "category": "commercial",
+    "location": "東京都千代田区",
+    "year": "2022",
+    "description": "築30年のオフィスビルの全面改修工事。外観デザインの刷新と内部設備の最新化により、現代のワークスタイルに適した空間に生まれ変わりました。工期中もテナントの営業を継続できるよう、綿密な施工計画を実施しました。",
+    "images": [
+      "https://images.pexels.com/photos/260931/pexels-photo-260931.jpeg",
+      "https://images.pexels.com/photos/1098982/pexels-photo-1098982.jpeg"
+    ]
+  },
+  {
+    "id": 3,
+    "title": "アボカド商業施設建設プロジェクト",
+    "category": "commercial",
+    "location": "神奈川県横浜市",
+    "year": "2021",
+    "description": "敷地面積5,000㎡の大型商業施設。地域のランドマークとなる特徴的な外観デザインと、多様なテナントが入居可能な柔軟な内部構造が特徴です。屋上には太陽光発電パネルを設置し、環境負荷の低減に貢献しています。",
+    "images": [
+      "https://images.pexels.com/photos/63633/pexels-photo-63633.jpeg",
+      "https://images.pexels.com/photos/264507/pexels-photo-264507.jpeg"
+    ]
+  },
+  {
+    "id": 4,
+    "title": "◇◇物流センター新設工事",
+    "category": "industrial",
+    "location": "埼玉県さいたま市",
+    "year": "2022",
+    "description": "最新の物流システムを導入した大型物流センター。効率的な動線計画と自動化技術の活用により、作業効率を大幅に向上させました。全館LED照明や高効率空調システムの採用により、環境負荷の低減と運用コストの削減を実現しています。",
+    "images": [
+      "https://images.pexels.com/photos/236705/pexels-photo-236705.jpeg",
+      "https://images.pexels.com/photos/4481326/pexels-photo-4481326.jpeg"
+    ]
+  },
+  {
+    "id": 5,
+    "title": "××邸新築工事",
+    "category": "residential",
+    "location": "東京都世田谷区",
+    "year": "2023",
+    "description": "自然素材を多用した木造3階建ての一戸建て住宅。家族の成長に合わせて間取りを変更できる可変性の高い設計と、省エネルギー性能の高さが特徴です。庭と室内をつなぐウッドデッキは、季節を問わず快適に過ごせる空間となっています。",
+    "images": [
+      "https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg",
+      "https://images.pexels.com/photos/259588/pexels-photo-259588.jpeg"
+    ]
+  },
+  {
+    "id": 6,
+    "title": "▽▽病院改築工事",
+    "category": "public",
+    "location": "千葉県千葉市",
+    "year": "2021",
+    "description": "地域医療の中核を担う総合病院の全面改築工事。患者の快適性と医療スタッフの効率性を両立させた設計で、最新の医療設備を導入しています。災害時の拠点となることを想定し、高い耐震性と自家発電設備を備えています。",
+    "images": [
+      "https://images.pexels.com/photos/668298/pexels-photo-668298.jpeg",
+      "https://images.pexels.com/photos/127873/pexels-photo-127873.jpeg"
+    ]
+  }
+]
