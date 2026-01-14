@@ -19,7 +19,7 @@ const Navbar = () => {
         <div className="flex justify-between items-center">
           <NavLink to="/" className="flex items-center space-x-2 text-navy-600">
             <HardHat size={28} className="text-orange-500" />
-            <span className="font-bold text-xl text-gray-800">中西構造設計</span>
+            <span className="font-bold text-xl text-gray-800">株式会社 中西構造設計</span>
           </NavLink>
 
           {/* Desktop menu */}

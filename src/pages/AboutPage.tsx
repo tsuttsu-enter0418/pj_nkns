@@ -23,18 +23,22 @@ const AboutPage = () => {
       {/* Company Profile */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-1 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">代表挨拶</h2>
-              <p className="text-gray-600 mb-4">株式会社中西構造設計は、１９９１年の創業以来、一般住宅・商業施設・福祉施設など</p>
-              <p className="text-gray-600 mb-4">多種多様な建物の構造設計を担当しております。</p>
-              <p className="text-gray-600 mb-4">地域密着型の会社として、地元の安全・安心に貢献できるよう、誠心誠意対応をさせて頂いております。</p>
-              <p className="text-gray-600 mb-4">これからも、皆様の生命と財産を地震等の災害から守っていける様、</p>
-              <p className="text-gray-600 mb-4">今後とも業務に邁進する所存でございます。</p>
-              <p className="text-gray-600 mb-4">ご指導、ご鞭撻のほどよろしくお願い致します。</p>
-              <p className="text-gray-600 mb-4 text-right">代表取締役 中西　治夫</p>
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">代表挨拶</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-start">
+            <div className="md:col-span-2">
+              <p className="text-gray-600 mb-4">株式会社中西構造設計は、１９９１年の創業以来、一般住宅・商業施設・福祉施設など、用途・規模・構造種別問わず</p>
+              <p className="text-gray-600 mb-4">多種多様な建物の構造設計を担ってまいりました。</p>
+              <p className="text-gray-600 mb-4">創業依頼培ってまいりました豊富な経験と、日々進化する新しい技術や知識を</p>
+              <p className="text-gray-600 mb-4">積極的に取り入れ、ひとつひとつのプロジェクトに丁寧に向き合っております。</p>
+              <p className="text-gray-600 mb-4">安全性・経済性等それぞれのニーズに合った構造をご提案致します。</p>
+              <p className="text-gray-600 mb-4">地域密着型の会社として今後も地元の安全安心に貢献して参ります。</p>
             </div>
-            {/* <div className="rounded-lg overflow-hidden shadow-lg"><img src="https://images.pexels.com/photos/260931/pexels-photo-260931.jpeg" alt="Office building" className="w-full h-full object-cover" /></div> */}
+            <div className="flex flex-col items-center">
+              <div className="mb-4 w-full max-w-xs">
+                <img src="/HaruoNakanishi_pic.jpg" alt="代表取締役 中西 治夫" className="w-full h-auto max-h-80 object-contain" />
+              </div>
+              <p className="text-gray-900 font-semibold text-center">代表取締役 中西 治夫</p>
+            </div>
           </div>
         </div>
       </section>
@@ -49,11 +53,11 @@ const AboutPage = () => {
               <tbody className="divide-y divide-gray-200">
                 <tr>
                   <th className="px-6 py-4 bg-gray-50 text-left text-sm font-medium text-gray-900 w-1/3">会社名</th>
-                  <td className="px-6 py-4 whitespace-nowrap text-gray-700">株式会社中西構造設計</td>
+                  <td className="px-6 py-4 whitespace-nowrap text-gray-700">株式会社 中西構造設計</td>
                 </tr>
                 <tr>
                   <th className="px-6 py-4 bg-gray-50 text-left text-sm font-medium text-gray-900 w-1/3">設立</th>
-                  <td className="px-6 py-4 whitespace-nowrap text-gray-700">1991年1月 2018年5月法人化</td>
+                  <td className="px-6 py-4 whitespace-nowrap text-gray-700">1991年1月創業 2018年5月法人化</td>
                 </tr>
                 <tr>
                   <th className="px-6 py-4 bg-gray-50 text-left text-sm font-medium text-gray-900 w-1/3">代表取締役</th>
@@ -71,7 +75,7 @@ const AboutPage = () => {
                   <th className="px-6 py-4 bg-gray-50 text-left text-sm font-medium text-gray-900 w-1/3">事業内容</th>
                   <td className="px-6 py-4 text-gray-700">
                     <ul className="list-disc pl-5 space-y-1">
-                      <li>建物の構造設計</li>
+                      <li>建築物・工作物の構造設計</li>
                       <li>工事監理</li>
                       <li>耐震診断・耐震補強設計</li>
                       <li>構造相談</li>
@@ -176,8 +180,124 @@ const AboutPage = () => {
         </div>
       </section>
 
-      {/* 所属団体 Section */}
+      {/* 使用プログラム等 Section */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">使用プログラム等</h2>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            {/* 構造計算プログラム */}
+            <div className="bg-gray-50 shadow rounded-lg p-6">
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">●構造計算プログラム</h3>
+              <div className="space-y-2 text-sm text-gray-700">
+                <div>
+                  <p className="font-medium">SuperBuild/SS7</p>
+                  <p className="text-gray-600">一貫構造計算プログラム</p>
+                </div>
+                <div>
+                  <p className="font-medium">SuperBuild/FA1</p>
+                  <p className="text-gray-600">任意形平面応力解析プログラム</p>
+                </div>
+                <div>
+                  <p className="font-medium">SuperBuild/MC1</p>
+                  <p className="text-gray-600">構造設計プログラム</p>
+                </div>
+                <div>
+                  <p className="font-medium">RCチャート</p>
+                  <p className="text-gray-600">構造設計プログラム（RC造)</p>
+                </div>
+                <div>
+                  <p className="font-medium">Sチャート</p>
+                  <p className="text-gray-600">構造設計プログラム（S造)</p>
+                </div>
+                <div>
+                  <p className="font-medium">KIZUKURI</p>
+                  <p className="text-gray-600">許容応力度計算（2025年法改正対応）</p>
+                </div>
+                <div>
+                  <p className="font-medium">ホームズ君「構造EX」</p>
+                  <p className="text-gray-600">許容応力度計算（2025年法改正対応）</p>
+                </div>
+                <div>
+                  <p className="font-medium">KIZUKURI-sub</p>
+                  <p className="text-gray-600">構造設計プログラム（木造)</p>
+                </div>
+                <div>
+                  <p className="font-medium">Midas iGen</p>
+                  <p className="text-gray-600">汎用構造解析ソフト</p>
+                </div>
+              </div>
+            </div>
+
+            {/* CADソフト */}
+            <div className="bg-gray-50 shadow rounded-lg p-6">
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">●CADソフト</h3>
+              <div className="space-y-2 text-sm text-gray-700">
+                <div>
+                  <p className="font-medium">JCAS VARIE</p>
+                  <p className="text-gray-600">構造図作図プログラム</p>
+                </div>
+                <div>
+                  <p className="font-medium">JW-CAD</p>
+                  <p className="text-gray-600">汎用CAD</p>
+                </div>
+                <div>
+                  <p className="font-medium">DORA-CAD</p>
+                  <p className="text-gray-600">汎用CAD</p>
+                </div>
+              </div>
+            </div>
+
+            {/* その他 */}
+            <div className="bg-gray-50 shadow rounded-lg p-6">
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">●その他</h3>
+              <div className="space-y-2 text-sm text-gray-700">
+                <div>
+                  <p className="font-medium">Microsoft office Excel</p>
+                  <p className="text-gray-600">自社作成プログラム・表計算等</p>
+                </div>
+                <div>
+                  <p className="font-medium">Microsoft office Word</p>
+                  <p className="text-gray-600">書類作成</p>
+                </div>
+                <div>
+                  <p className="font-medium">Docuworks</p>
+                  <p className="text-gray-600">構造計算書作成</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 加入保険 Section */}
       <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">加入保険</h2>
+          </div>
+
+          <div className="bg-white shadow rounded-lg overflow-hidden">
+            <div className="p-8">
+              <ul className="space-y-4 text-gray-700">
+                <li className="flex items-start">
+                  <span className="text-orange-500 mr-3 text-lg">•</span>
+                  <span>JSCA構造設計賠償責任保険 一般社団法人 日本建築構造技術者協会</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-orange-500 mr-3 text-lg">•</span>
+                  <span>建築士賠償責任補償制度(けんばい) 公益社団法人 日本建築士連合会</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 所属団体 Section */}
+      <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">所属団体</h2>
@@ -216,22 +336,13 @@ const AboutPage = () => {
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">お気軽にお問い合わせ・ご相談ください。</p>
           </div>
 
-          {/* Replace with actual Google Maps embed */}
-          <div className="bg-white shadow-lg rounded-lg overflow-hidden">
-            {/* <div className="h-96 bg-gray-200">
-              <div className="w-full h-full flex items-center justify-center bg-gray-100">
-                <div className="text-center">
-                  <MapPin size={48} className="text-orange-500 mx-auto mb-4" />
-                  <p className="text-gray-500">地図が表示されます</p>
-                  <p className="mt-2 text-sm text-gray-500">※実際のウェブサイトでは、ここにGoogle Mapsが埋め込まれます</p>
-                </div>
-              </div>
-            </div> */}
-            <div className="p-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {/* 左側: 住所・連絡先情報 */}
+            <div className="bg-white shadow-lg rounded-lg p-6">
               <h3 className="text-xl font-semibold mb-2">本社</h3>
               <p className="text-gray-600 mb-4">〒634-0006 奈良県橿原市新賀町235-6 橋本ビル3階</p>
               <h3 className="text-xl font-semibold mb-2">連絡先</h3>
-              <div className="items-center text-gray-600 mb-2">
+              <div className="text-gray-600 mb-4">
                 <p>
                   <a href="tel:0744246537">TEL：0744-24-6537</a>
                 </p>
@@ -241,9 +352,21 @@ const AboutPage = () => {
                 <p>E-mail :HQL03341@nifty.com</p>
               </div>
               <h3 className="text-xl font-semibold mb-2">営業時間</h3>
-              <div className="flex items-center text-gray-600">
-                <p>平日 9:00〜18:00（土日祝休）</p>
-              </div>
+              <p className="text-gray-600">平日 9:00〜18:00（土日祝休）</p>
+            </div>
+
+            {/* 右側: Googleマップ */}
+            <div className="bg-white shadow-lg rounded-lg overflow-hidden">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d269.3066313393466!2d135.79504258786562!3d34.51565604135183!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60013318ae8142a3%3A0x24ca8bc2e38a40eb!2z5Lit6KW_5qeL6YCg6Kit6KiI5LqL5YuZ5omA!5e0!3m2!1sja!2sjp!4v1768387252449!5m2!1sja!2sjp"
+                width="100%"
+                height="450"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="株式会社中西構造設計 所在地"
+              />
             </div>
           </div>
         </div>

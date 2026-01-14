@@ -16,7 +16,10 @@ const HomePage = () => {
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
             <span className="text-orange-500">安全</span>と<span className="text-orange-500">安心</span>を守る構造設計
           </h1>
-          <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">創業以来　建物の安全、安心を守るため、確かな技術と誠実な対応で日々取り組んでおります。</p>
+          <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto">
+            創業以来　建物の安全、安心を守るため、日々技術の研鑽に努めております。<br></br>
+            一つ一つのプロジェクトに対し丁寧に向き合ってまいります。
+          </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <NavLink to="/about" className="bg-orange-500 hover:bg-orange-600 text-white py-3 px-8 rounded-md text-lg font-medium transition-colors duration-300">
               会社について
@@ -103,8 +106,8 @@ const HomePage = () => {
                 <Pyramid size={36} />
               </div>
               <h3 className="text-xl font-semibold mb-3 text-gray-900">多種多様な構造に対応</h3>
-              <p className="text-gray-600">鉄骨造及び鉄筋コンクリート造並びに木構造</p>
-              <p className="text-gray-600">を含む構造種別は問いません。</p>
+              <p className="text-gray-600">鉄骨造・鉄筋コンクリート造・木構造等</p>
+              <p className="text-gray-600">構造種別は問いません。</p>
             </div>
 
             <div className="bg-gray-50 p-8 rounded-lg shadow-sm transition-transform duration-300 hover:transform hover:scale-105">
@@ -113,8 +116,8 @@ const HomePage = () => {
               </div>
               <h3 className="text-xl font-semibold mb-3 text-gray-900">多種多様な規模・用途に対応</h3>
               <p className="text-gray-600">一般住宅・事務所ビル・倉庫・マンション等</p>
-              <p className="text-gray-600">高さ４５ｍ約１４階建ての建物まで対応。</p>
-              <p className="text-gray-600">宅地造成の擁壁・進入橋・看板等も手掛けています。</p>
+              <p className="text-gray-600">高さ４５ｍ約１5階程度の建物まで対応。</p>
+              <p className="text-gray-600">宅地造成の擁壁・進入橋・看板等の設計も行っております。</p>
             </div>
           </div>
         </div>
