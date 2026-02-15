@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { X, ChevronLeft, ChevronRight, Edit } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 
 interface Project {
   id: number;
@@ -14,11 +14,31 @@ interface Project {
 interface ProjectModalProps {
   project: Project;
   onClose: () => void;
-  onEdit: (project: Project) => void;
 }
 
-const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose, onEdit }) => {
+const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  // モーダルが開いている間、背景のスクロールを無効化
+  useEffect(() => {
+    // 現在のスクロール位置を保存
+    const scrollY = window.scrollY;
+
+    // bodyのスクロールを無効化
+    document.body.style.position = 'fixed';
+    document.body.style.top = `-${scrollY}px`;
+    document.body.style.width = '100%';
+    document.body.style.overflowY = 'scroll';
+
+    // クリーンアップ関数：モーダルを閉じる時にスクロールを復元
+    return () => {
+      document.body.style.position = '';
+      document.body.style.top = '';
+      document.body.style.width = '';
+      document.body.style.overflowY = '';
+      window.scrollTo(0, scrollY);
+    };
+  }, []);
 
   const nextImage = (e: React.MouseEvent) => {
     e.stopPropagation();
@@ -53,20 +73,12 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose, onEdit })
       <div className="bg-white rounded-lg max-w-4xl w-full max-h-[90vh] overflow-hidden shadow-xl" onClick={(e) => e.stopPropagation()}>
         <div className="flex justify-between items-center p-4 border-b">
           <h2 className="text-xl font-semibold text-gray-900">{project.title}</h2>
-          <div className="flex items-center space-x-2">
-            {/* <button
-              onClick={() => onEdit(project)}
-              className="p-2 text-gray-500 hover:text-orange-500 transition-colors"
-            >
-              <Edit size={20} />
-            </button> */}
-            <button
-              onClick={onClose}
-              className="p-2 text-gray-500 hover:text-gray-700 transition-colors"
-            >
-              <X size={20} />
-            </button>
-          </div>
+          <button
+            onClick={onClose}
+            className="p-2 text-gray-500 hover:text-gray-700 transition-colors"
+          >
+            <X size={20} />
+          </button>
         </div>
         
         <div className="overflow-y-auto max-h-[calc(90vh-6rem)]">
