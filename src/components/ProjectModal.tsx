@@ -68,6 +68,23 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
     return categories[categoryId] || categoryId;
   };
 
+  const formatDate = (dateStr: string) => {
+    // 日付文字列をそのまま返すか、フォーマット変換を試みる
+    if (!dateStr) return dateStr;
+
+    // YYYY/MM/DD または YYYY-MM-DD 形式の場合
+    const datePattern = /^(\d{4})[/-](\d{1,2})[/-](\d{1,2})$/;
+    const match = dateStr.match(datePattern);
+
+    if (match) {
+      const [, year, month, day] = match;
+      return `${year}年${month.padStart(2, '0')}月${day.padStart(2, '0')}日`;
+    }
+
+    // フォーマットが一致しない場合は、そのまま返す
+    return dateStr;
+  };
+
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black bg-opacity-70" onClick={onClose}>
       <div className="bg-white rounded-lg max-w-4xl w-full max-h-[90vh] overflow-hidden shadow-xl" onClick={(e) => e.stopPropagation()}>
@@ -134,14 +151,18 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
           
           <div className="p-6">
             <div className="flex flex-wrap gap-3 mb-6">
-              <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-orange-100 text-orange-800">
-                {getCategoryName(project.category)}
-              </span>
-              <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-blue-100 text-blue-800">
-                {project.location}
-              </span>
+              {project.category && project.category.split(',').map((cat, index) => (
+                <span key={index} className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-orange-100 text-orange-800">
+                  {getCategoryName(cat.trim())}
+                </span>
+              ))}
+              {project.location && project.location.trim() !== '' && (
+                <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-blue-100 text-blue-800">
+                  {project.location}
+                </span>
+              )}
               <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-green-100 text-green-800">
-                {project.year}年
+                {formatDate(project.year)}
               </span>
             </div>
             
@@ -149,13 +170,15 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
             <p className="text-gray-600 mb-6 whitespace-pre-line">{project.description}</p>
             
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">施工場所</h3>
-                <p className="text-gray-600">{project.location}</p>
-              </div>
+              {project.location && project.location.trim() !== '' && (
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">施工場所</h3>
+                  <p className="text-gray-600">{project.location}</p>
+                </div>
+              )}
               <div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">完成年</h3>
-                <p className="text-gray-600">{project.year}年</p>
+                <p className="text-gray-600">{formatDate(project.year)}</p>
               </div>
             </div>
           </div>

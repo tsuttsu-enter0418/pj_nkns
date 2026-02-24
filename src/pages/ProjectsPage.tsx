@@ -20,6 +20,23 @@ const ProjectsPage = () => {
 
   // Simulated projects data (in a real app this would come from a database)
   const [projects, setProjects] = useState<Project[]>([]);
+
+  // 日付フォーマット関数
+  const formatDate = (dateStr: string) => {
+    if (!dateStr) return dateStr;
+
+    // YYYY/MM/DD または YYYY-MM-DD 形式の場合
+    const datePattern = /^(\d{4})[/-](\d{1,2})[/-](\d{1,2})$/;
+    const match = dateStr.match(datePattern);
+
+    if (match) {
+      const [, year, month, day] = match;
+      return `${year}年${month.padStart(2, '0')}月${day.padStart(2, '0')}日`;
+    }
+
+    // フォーマットが一致しない場合は、そのまま返す
+    return dateStr;
+  };
   // プロジェクトデータを非同期で取得する関数
   const fetchProject = async (): Promise<Project[]> => {
     const res = await fetch("/project.json?v=1.0");
@@ -48,13 +65,18 @@ const ProjectsPage = () => {
     loadProjects(); // データの取得を最初に実行
   }, []); // 空の依存配列で、コンポーネントの初回レンダリング時に一度だけ実行される
 
-  // カテゴリーを動的に生成
-  const uniqueCategories = Array.from(new Set(projects.map((p) => p.category)));
+  // カテゴリーを動的に生成（カンマ区切りに対応）
+  const allCategories = projects.flatMap((p) =>
+    p.category ? p.category.split(',').map(cat => cat.trim()) : []
+  );
+  const uniqueCategories = Array.from(new Set(allCategories));
   const categories = [{ id: "all", name: "すべて" }, ...uniqueCategories.map((cat) => ({ id: cat, name: cat }))];
 
   const filteredProjects = projects.filter((project) => {
-    const matchesCategory = selectedCategory === "all" || project.category === selectedCategory;
-    return matchesCategory;
+    if (selectedCategory === "all") return true;
+    // プロジェクトのカテゴリーをカンマ区切りで分割し、選択されたカテゴリーが含まれるかチェック
+    const projectCategories = project.category ? project.category.split(',').map(cat => cat.trim()) : [];
+    return projectCategories.includes(selectedCategory);
   });
 
   const openProjectModal = (project: Project) => {
@@ -117,14 +139,29 @@ const ProjectsPage = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {filteredProjects.map((project) => (
                 <div key={project.id} className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col">
+                  {/* プロジェクト画像 */}
+                  {project.images.length > 0 && (
+                    <div className="relative h-48 bg-gray-100 overflow-hidden">
+                      <img
+                        src={project.images[0]}
+                        alt={project.title}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  )}
+
                   <div className="p-6 flex flex-col flex-grow">
                     <div className="flex justify-between items-start mb-3">
                       <h3 className="text-xl font-semibold text-gray-900">{project.title}</h3>
-                      <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-orange-100 text-orange-800">{project.year}</span>
+                      <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-orange-100 text-orange-800">{formatDate(project.year)}</span>
                     </div>
 
-                    <div className="mb-3">
-                      <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800">{project.category}</span>
+                    <div className="mb-3 flex flex-wrap gap-2">
+                      {project.category && project.category.split(',').map((cat, index) => (
+                        <span key={index} className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800">
+                          {cat.trim()}
+                        </span>
+                      ))}
                     </div>
 
                     <p className="text-gray-600 mb-3 flex items-center">
