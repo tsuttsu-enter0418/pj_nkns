@@ -38,13 +38,13 @@ const HomePage = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">事業内容</h2>
           </div>
 
-          <div className="grid grid-cols-3 md:grid-cols-3 gap-5">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
             <div className="bg-white p-6 rounded-lg shadow-sm flex flex-col items-center text-center">
               <div className="mb-4 text-orange-500">
                 <CheckCircle size={24} />
               </div>
               <div>
-                <h4 className="text-xl font-semibold mb-2 text-gray-900">建築物の構造設計、監理</h4>
+                <h4 className="text-lg md:text-xl font-semibold mb-2 text-gray-900">建築物の構造設計、監理</h4>
                 {/* <p className="text-gray-600">住宅、マンション、オフィスビル、商業施設など、各種建築物の新築・改修工事</p> */}
               </div>
             </div>
@@ -54,7 +54,7 @@ const HomePage = () => {
                 <CheckCircle size={24} />
               </div>
               <div>
-                <h4 className="text-xl font-semibold mb-2 text-gray-900">建築物の耐震診断、耐震補強設計</h4>
+                <h4 className="text-lg md:text-xl font-semibold mb-2 text-gray-900">建築物の耐震診断、耐震補強設計</h4>
                 {/* <p className="text-gray-600">道路、橋梁、上下水道など公共インフラの整備・補修工事</p> */}
               </div>
             </div>
@@ -64,8 +64,8 @@ const HomePage = () => {
                 <CheckCircle size={24} />
               </div>
               <div>
-                <h4 className="text-xl font-semibold mb-2 text-gray-900">
-                  各種構造に対する<br></br>相談・調査・アドバイス
+                <h4 className="text-lg md:text-xl font-semibold mb-2 text-gray-900">
+                  各種構造に対する相談・調査・アドバイス
                 </h4>
                 {/* <p className="text-gray-600">建築物の設計から施工監理までトータルでサポート</p> */}
               </div>
