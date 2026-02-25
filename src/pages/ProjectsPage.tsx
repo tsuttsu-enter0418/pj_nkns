@@ -94,7 +94,7 @@ const ProjectsPage = () => {
       {/* Hero Section */}
       <section className="relative pt-24 pb-16 md:pt-32 md:pb-20">
         <div className="absolute inset-0 z-0">
-          <img src="https://images.pexels.com/photos/2760241/pexels-photo-2760241.jpeg" alt="Construction projects" className="w-full h-full object-cover" />
+          <img src="https://images.pexels.com/photos/834892/pexels-photo-834892.jpeg" alt="Structural design blueprints" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-black bg-opacity-60"></div>
         </div>
 

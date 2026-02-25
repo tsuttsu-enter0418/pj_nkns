@@ -7,7 +7,7 @@ const AboutPage = () => {
       {/* Hero Section */}
       <section className="relative pt-24 pb-16 md:pt-32 md:pb-24">
         <div className="absolute inset-0 z-0 h-2/3">
-          <img src="https://images.pexels.com/photos/2760243/pexels-photo-2760243.jpeg" alt="Construction site" className="w-full h-full object-cover" />
+          <img src="https://images.pexels.com/photos/834892/pexels-photo-834892.jpeg" alt="Structural design blueprints" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-black bg-opacity-60"></div>
         </div>
 
@@ -26,8 +26,9 @@ const AboutPage = () => {
           <h2 className="text-3xl font-bold text-gray-900 mb-6">代表挨拶</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-start">
             <div className="md:col-span-2">
-              <p className="text-gray-600 mb-4">株式会社中西構造設計は、１９９１年の創業以来、一般住宅・商業施設・福祉施設など、用途・規模・構造種別問わず</p>
-              <p className="text-gray-600 mb-4">多種多様な建物の構造設計を担ってまいりました。</p>
+              <p className="text-gray-600 mb-4">株式会社中西構造設計は、１９９１年の創業以来、一般住宅・商業施設・福祉施設など、</p>
+              <p className="text-gray-600 mb-4">公共建築物・民間建築物・用途・規模・構造種別問わず多種多様な建物の構造設計を担ってまいりました。</p>
+              <p className="text-gray-600 mb-4">また、既存建物の耐震診断、耐震補強も数多く手がけております。</p>
               <p className="text-gray-600 mb-4">創業依頼培ってまいりました豊富な経験と、日々進化する新しい技術や知識を</p>
               <p className="text-gray-600 mb-4">積極的に取り入れ、ひとつひとつのプロジェクトに丁寧に向き合っております。</p>
               <p className="text-gray-600 mb-4">安全性・経済性等それぞれのニーズに合った構造をご提案致します。</p>
@@ -53,7 +54,7 @@ const AboutPage = () => {
               <tbody className="divide-y divide-gray-200">
                 <tr>
                   <th className="px-6 py-4 bg-gray-50 text-left text-sm font-medium text-gray-900 w-1/3">会社名</th>
-                  <td className="px-6 py-4 whitespace-nowrap text-gray-700">株式会社 中西構造設計</td>
+                  <td className="px-6 py-4 whitespace-nowrap text-gray-700">株式会社 中西構造設 （旧社名 中西構造設計事務所）</td>
                 </tr>
                 <tr>
                   <th className="px-6 py-4 bg-gray-50 text-left text-sm font-medium text-gray-900 w-1/3">設立</th>
@@ -149,14 +150,7 @@ const AboutPage = () => {
 
             <div className="bg-gradient-to-br from-orange-50 to-white p-6 rounded-lg shadow-md border border-orange-100 hover:shadow-lg transition-shadow">
               <div className="flex items-center justify-between">
-                <h3 className="text-lg font-semibold text-gray-800">建築構造士</h3>
-                <div className="bg-orange-500 text-white rounded-full w-12 h-12 flex items-center justify-center text-xl font-bold">1名</div>
-              </div>
-            </div>
-
-            <div className="bg-gradient-to-br from-orange-50 to-white p-6 rounded-lg shadow-md border border-orange-100 hover:shadow-lg transition-shadow">
-              <div className="flex items-center justify-between">
-                <h3 className="text-lg font-semibold text-gray-800">構造設計１級及建築士</h3>
+                <h3 className="text-lg font-semibold text-gray-800">JSCA建築構造士</h3>
                 <div className="bg-orange-500 text-white rounded-full w-12 h-12 flex items-center justify-center text-xl font-bold">1名</div>
               </div>
             </div>
@@ -321,7 +315,7 @@ const AboutPage = () => {
                 </li>
                 <li className="flex items-start">
                   <span className="text-orange-500 mr-3 text-lg">•</span>
-                  <span>一般社団法人 日本建築構造技術者協会</span>
+                  <span>一般社団法人 日本建築構造技術者協会（JSCA）</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-orange-500 mr-3 text-lg">•</span>
