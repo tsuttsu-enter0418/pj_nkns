@@ -96,7 +96,12 @@ const AboutPage = () => {
                     <p>
                       <a href="tel:0744246549">FAX : 0744-24-6549</a>
                     </p>
-                    <p>E-mail :HQL03341@nifty.com</p>
+                    <p>
+                      E-mail :
+                      <a href="mailto:HQL03341@nifty.com" className="hover:text-orange-500 transition-colors">
+                        HQL03341@nifty.com
+                      </a>
+                    </p>
                   </td>
                 </tr>
                 <tr>
@@ -349,7 +354,12 @@ const AboutPage = () => {
                 <p>
                   <a href="tel:0744246549">FAX : 0744-24-6549</a>
                 </p>
-                <p>E-mail :HQL03341@nifty.com</p>
+                <p>
+                  E-mail :
+                  <a href="mailto:HQL03341@nifty.com" className="hover:text-orange-500 transition-colors">
+                    HQL03341@nifty.com
+                  </a>
+                </p>
               </div>
               <h3 className="text-xl font-semibold mb-2">営業時間</h3>
               <p className="text-gray-600">平日 9:00〜18:00（土日祝休）</p>
