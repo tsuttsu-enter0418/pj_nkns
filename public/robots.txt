@@ -1,0 +1,8 @@
+# robots.txt for 株式会社 中西構造設計
+# すべての検索エンジンのクローラーを許可
+
+User-agent: *
+Allow: /
+
+# サイトマップの場所を指定
+Sitemap: https://pj-nkns.vercel.app/sitemap.xml
