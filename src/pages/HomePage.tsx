@@ -8,7 +8,7 @@ const HomePage = () => {
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center">
         <div className="absolute inset-0 z-0">
-          <img src="https://images.pexels.com/photos/834892/pexels-photo-834892.jpeg" alt="Structural design blueprints" className="w-full h-full object-cover" />
+          <img src="/BackgroundImage.png" alt="Structural design blueprints" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-black bg-opacity-60"></div>
         </div>
 
@@ -44,7 +44,7 @@ const HomePage = () => {
                 <CheckCircle size={24} />
               </div>
               <div>
-                <h4 className="text-lg md:text-xl font-semibold mb-2 text-gray-900">建築物の構造設計、監理</h4>
+                <h4 className="text-lg md:text-xl font-semibold mb-2 text-gray-900">建築物の構造設計、工事監理</h4>
                 {/* <p className="text-gray-600">住宅、マンション、オフィスビル、商業施設など、各種建築物の新築・改修工事</p> */}
               </div>
             </div>
@@ -64,9 +64,7 @@ const HomePage = () => {
                 <CheckCircle size={24} />
               </div>
               <div>
-                <h4 className="text-lg md:text-xl font-semibold mb-2 text-gray-900">
-                  各種構造に対する相談・調査・アドバイス
-                </h4>
+                <h4 className="text-lg md:text-xl font-semibold mb-2 text-gray-900">各種構造に対する相談・調査・アドバイス</h4>
                 {/* <p className="text-gray-600">建築物の設計から施工監理までトータルでサポート</p> */}
               </div>
             </div>

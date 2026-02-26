@@ -31,7 +31,7 @@ const ProjectsPage = () => {
 
     if (match) {
       const [, year, month, day] = match;
-      return `${year}年${month.padStart(2, '0')}月${day.padStart(2, '0')}日`;
+      return `${year}年${month.padStart(2, "0")}月${day.padStart(2, "0")}日`;
     }
 
     // フォーマットが一致しない場合は、そのまま返す
@@ -66,16 +66,14 @@ const ProjectsPage = () => {
   }, []); // 空の依存配列で、コンポーネントの初回レンダリング時に一度だけ実行される
 
   // カテゴリーを動的に生成（カンマ区切りに対応）
-  const allCategories = projects.flatMap((p) =>
-    p.category ? p.category.split(',').map(cat => cat.trim()) : []
-  );
+  const allCategories = projects.flatMap((p) => (p.category ? p.category.split(",").map((cat) => cat.trim()) : []));
   const uniqueCategories = Array.from(new Set(allCategories));
   const categories = [{ id: "all", name: "すべて" }, ...uniqueCategories.map((cat) => ({ id: cat, name: cat }))];
 
   const filteredProjects = projects.filter((project) => {
     if (selectedCategory === "all") return true;
     // プロジェクトのカテゴリーをカンマ区切りで分割し、選択されたカテゴリーが含まれるかチェック
-    const projectCategories = project.category ? project.category.split(',').map(cat => cat.trim()) : [];
+    const projectCategories = project.category ? project.category.split(",").map((cat) => cat.trim()) : [];
     return projectCategories.includes(selectedCategory);
   });
 
@@ -94,7 +92,7 @@ const ProjectsPage = () => {
       {/* Hero Section */}
       <section className="relative pt-24 pb-16 md:pt-32 md:pb-20">
         <div className="absolute inset-0 z-0">
-          <img src="https://images.pexels.com/photos/834892/pexels-photo-834892.jpeg" alt="Structural design blueprints" className="w-full h-full object-cover" />
+          <img src="/blueprint2.png" alt="Structural design blueprints" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-black bg-opacity-60"></div>
         </div>
 
@@ -142,11 +140,7 @@ const ProjectsPage = () => {
                   {/* プロジェクト画像 */}
                   {project.images.length > 0 && (
                     <div className="relative h-48 bg-gray-100 overflow-hidden">
-                      <img
-                        src={project.images[0]}
-                        alt={project.title}
-                        className="w-full h-full object-cover"
-                      />
+                      <img src={project.images[0]} alt={project.title} className="w-full h-full object-cover" />
                     </div>
                   )}
 
@@ -157,11 +151,12 @@ const ProjectsPage = () => {
                     </div>
 
                     <div className="mb-3 flex flex-wrap gap-2">
-                      {project.category && project.category.split(',').map((cat, index) => (
-                        <span key={index} className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800">
-                          {cat.trim()}
-                        </span>
-                      ))}
+                      {project.category &&
+                        project.category.split(",").map((cat, index) => (
+                          <span key={index} className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800">
+                            {cat.trim()}
+                          </span>
+                        ))}
                     </div>
 
                     <p className="text-gray-600 mb-3 flex items-center">

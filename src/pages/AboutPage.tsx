@@ -7,7 +7,7 @@ const AboutPage = () => {
       {/* Hero Section */}
       <section className="relative pt-24 pb-16 md:pt-32 md:pb-24">
         <div className="absolute inset-0 z-0 h-2/3">
-          <img src="https://images.pexels.com/photos/834892/pexels-photo-834892.jpeg" alt="Structural design blueprints" className="w-full h-full object-cover" />
+          <img src="/blueprint1.png" alt="Structural design blueprints" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-black bg-opacity-60"></div>
         </div>
 
@@ -54,7 +54,7 @@ const AboutPage = () => {
               <tbody className="divide-y divide-gray-200">
                 <tr>
                   <th className="px-6 py-4 bg-gray-50 text-left text-sm font-medium text-gray-900 w-1/3">会社名</th>
-                  <td className="px-6 py-4 whitespace-nowrap text-gray-700">株式会社 中西構造設 （旧社名 中西構造設計事務所）</td>
+                  <td className="px-6 py-4 whitespace-nowrap text-gray-700">株式会社 中西構造設計 （旧社名 中西構造設計事務所）</td>
                 </tr>
                 <tr>
                   <th className="px-6 py-4 bg-gray-50 text-left text-sm font-medium text-gray-900 w-1/3">設立</th>

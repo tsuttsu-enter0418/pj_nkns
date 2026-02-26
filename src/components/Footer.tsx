@@ -72,7 +72,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-          <p>&copy; {new Date().getFullYear()} 建設株式会社. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} 株式会社 中西構造設計. All rights reserved.</p>
         </div>
       </div>
     </footer>
