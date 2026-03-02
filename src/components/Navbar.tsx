@@ -53,9 +53,6 @@ const Navbar = () => {
           <NavLink to="/about" className={({ isActive }) => `block text-lg font-medium py-2 ${isActive ? "text-orange-500" : "text-gray-800"}`} onClick={closeMenu}>
             会社概要
           </NavLink>
-          <NavLink to="/policy" className={({ isActive }) => `block text-lg font-medium py-2 ${isActive ? "text-orange-500" : "text-gray-800"}`} onClick={closeMenu}>
-            方針・スタッフ
-          </NavLink>
           <NavLink to="/projects" className={({ isActive }) => `block text-lg font-medium py-2 ${isActive ? "text-orange-500" : "text-gray-800"}`} onClick={closeMenu}>
             実績
           </NavLink>
