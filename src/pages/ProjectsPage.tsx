@@ -23,7 +23,7 @@ const ProjectsPage = () => {
 
   // プロジェクトデータを非同期で取得する関数
   const fetchProject = async (): Promise<Project[]> => {
-    const res = await fetch("/project.json?v=1.0");
+    const res = await fetch("/data/project.json?v=1.0");
     if (!res.ok) {
       throw new Error("だめでした");
     }
