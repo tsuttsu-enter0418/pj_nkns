@@ -5,4 +5,4 @@ User-agent: *
 Allow: /
 
 # サイトマップの場所を指定
-Sitemap: https://pj-nkns.vercel.app/sitemap.xml
+Sitemap: https://nakanishi-kozo.sakura.ne.jp/sitemap.xml
