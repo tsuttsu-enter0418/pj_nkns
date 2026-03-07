@@ -69,19 +69,45 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
   };
 
   const formatDate = (dateStr: string) => {
-    // 日付文字列をそのまま返すか、フォーマット変換を試みる
     if (!dateStr) return dateStr;
 
-    // YYYY/MM/DD または YYYY-MM-DD 形式の場合
+    // YYYY形式（年のみ）
+    if (/^\d{4}$/.test(dateStr)) {
+      return `${dateStr}年`;
+    }
+
+    // YYYYMM形式（年月）
+    if (/^\d{6}$/.test(dateStr)) {
+      const year = dateStr.substring(0, 4);
+      const month = dateStr.substring(4, 6);
+      return `${year}年${month}月`;
+    }
+
+    // YYYYMMDD形式（年月日）
+    if (/^\d{8}$/.test(dateStr)) {
+      const year = dateStr.substring(0, 4);
+      const month = dateStr.substring(4, 6);
+      const day = dateStr.substring(6, 8);
+      return `${year}年${month}月${day}日`;
+    }
+
+    // YYYY/MM/DD または YYYY-MM-DD 形式
     const datePattern = /^(\d{4})[/-](\d{1,2})[/-](\d{1,2})$/;
     const match = dateStr.match(datePattern);
-
     if (match) {
       const [, year, month, day] = match;
       return `${year}年${month.padStart(2, '0')}月${day.padStart(2, '0')}日`;
     }
 
-    // フォーマットが一致しない場合は、そのまま返す
+    // YYYY/MM または YYYY-MM 形式
+    const yearMonthPattern = /^(\d{4})[/-](\d{1,2})$/;
+    const yearMonthMatch = dateStr.match(yearMonthPattern);
+    if (yearMonthMatch) {
+      const [, year, month] = yearMonthMatch;
+      return `${year}年${month.padStart(2, '0')}月`;
+    }
+
+    // どのパターンにも一致しない場合はそのまま返す
     return dateStr;
   };
 
@@ -161,14 +187,11 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
                   {project.location}
                 </span>
               )}
-              <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-green-100 text-green-800">
-                {formatDate(project.year)}
-              </span>
             </div>
             
             <h3 className="text-lg font-semibold text-gray-900 mb-2">プロジェクト概要</h3>
             <p className="text-gray-600 mb-6 whitespace-pre-line">{project.description}</p>
-            
+
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {project.location && project.location.trim() !== '' && (
                 <div>
@@ -177,7 +200,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
                 </div>
               )}
               <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">完成年</h3>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">完成日</h3>
                 <p className="text-gray-600">{formatDate(project.year)}</p>
               </div>
             </div>

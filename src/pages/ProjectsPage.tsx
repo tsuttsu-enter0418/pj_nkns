@@ -21,22 +21,6 @@ const ProjectsPage = () => {
   // Simulated projects data (in a real app this would come from a database)
   const [projects, setProjects] = useState<Project[]>([]);
 
-  // 日付フォーマット関数
-  const formatDate = (dateStr: string) => {
-    if (!dateStr) return dateStr;
-
-    // YYYY/MM/DD または YYYY-MM-DD 形式の場合
-    const datePattern = /^(\d{4})[/-](\d{1,2})[/-](\d{1,2})$/;
-    const match = dateStr.match(datePattern);
-
-    if (match) {
-      const [, year, month, day] = match;
-      return `${year}年${month.padStart(2, "0")}月${day.padStart(2, "0")}日`;
-    }
-
-    // フォーマットが一致しない場合は、そのまま返す
-    return dateStr;
-  };
   // プロジェクトデータを非同期で取得する関数
   const fetchProject = async (): Promise<Project[]> => {
     const res = await fetch("/project.json?v=1.0");
@@ -145,9 +129,8 @@ const ProjectsPage = () => {
                   )}
 
                   <div className="p-6 flex flex-col flex-grow">
-                    <div className="flex justify-between items-start mb-3">
+                    <div className="mb-3">
                       <h3 className="text-xl font-semibold text-gray-900">{project.title}</h3>
-                      <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-orange-100 text-orange-800">{formatDate(project.year)}</span>
                     </div>
 
                     <div className="mb-3 flex flex-wrap gap-2">
