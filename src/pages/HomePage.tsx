@@ -13,10 +13,10 @@ const HomePage = () => {
         </div>
 
         <div className="relative z-10 text-center text-white px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight" style={{ textShadow: '2px 2px 8px rgba(0, 0, 0, 0.8)' }}>
             <span className="text-orange-500">安全</span>と<span className="text-orange-500">安心</span>を守る構造設計
           </h1>
-          <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto">
+          <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto" style={{ textShadow: '2px 2px 6px rgba(0, 0, 0, 0.8)' }}>
             創業以来　建物の安全、安心を守るため、日々技術の研鑽に努めております。<br></br>
             一つ一つのプロジェクトに対し丁寧に向き合ってまいります。
           </p>
@@ -25,7 +25,7 @@ const HomePage = () => {
               会社について
             </NavLink>
             <NavLink to="/projects" className="bg-transparent hover:bg-white hover:text-gray-900 text-white py-3 px-8 rounded-md text-lg font-medium border-2 border-white transition-colors duration-300">
-              施工実績を見る
+              設計実績を見る
             </NavLink>
           </div>
         </div>

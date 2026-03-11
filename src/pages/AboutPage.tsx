@@ -8,11 +8,11 @@ const AboutPage = () => {
       <section className="relative pt-24 pb-16 md:pt-32 md:pb-24">
         <div className="absolute inset-0 z-0 h-2/3">
           <img src="/blueprint1.png" alt="Structural design blueprints" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-black bg-opacity-60"></div>
+          <div className="absolute inset-0 bg-black bg-opacity-20"></div>
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">会社概要</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6" style={{ textShadow: '2px 2px 8px rgba(0, 0, 0, 0.8)' }}>会社概要</h1>
           {/* <p className="text-xl max-w-3xl mx-auto">
             建設株式会社は創業以来、「誠実・信頼・技術」を理念に、
             お客様に満足いただける建築物を提供し続けています。

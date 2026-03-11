@@ -77,12 +77,12 @@ const ProjectsPage = () => {
       <section className="relative pt-24 pb-16 md:pt-32 md:pb-20">
         <div className="absolute inset-0 z-0">
           <img src="/blueprint2.png" alt="Structural design blueprints" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-black bg-opacity-60"></div>
+          <div className="absolute inset-0 bg-black bg-opacity-20"></div>
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">設計実績</h1>
-          <p className="text-lg md:text-xl max-w-4xl mx-auto leading-relaxed">
+          <h1 className="text-4xl md:text-5xl font-bold mb-6" style={{ textShadow: '2px 2px 8px rgba(0, 0, 0, 0.8)' }}>設計実績</h1>
+          <p className="text-lg md:text-xl max-w-4xl mx-auto leading-relaxed" style={{ textShadow: '2px 2px 6px rgba(0, 0, 0, 0.8)' }}>
             私たちが手掛けた様々なプロジェクトをご紹介します。
             <br className="hidden md:block" />
             住宅から商業施設、公共建築物まで、多様な建築実績があります。
