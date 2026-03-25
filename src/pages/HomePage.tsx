@@ -14,7 +14,7 @@ const HomePage = () => {
 
         <div className="relative z-10 text-center text-white px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight" style={{ textShadow: '2px 2px 8px rgba(0, 0, 0, 0.8)' }}>
-            <span className="text-orange-500">安全</span>と<span className="text-orange-500">安心</span>を守る構造設計
+            <span style={{ color: '#ff7e1d' }}>安全</span>と<span style={{ color: '#ff7e1d' }}>安心</span>を守る構造設計
           </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto" style={{ textShadow: '2px 2px 6px rgba(0, 0, 0, 0.8)' }}>
             創業以来　建物の安全、安心を守るため、日々技術の研鑽に努めております。<br></br>
