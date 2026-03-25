@@ -18,7 +18,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           <NavLink to="/" className="flex items-center space-x-2 text-navy-600">
-            <HardHat size={28} className="text-orange-500" />
+            {/* <HardHat size={28} className="text-orange-500" /> */}
             <span className="font-bold text-xl text-gray-800">株式会社 中西構造設計</span>
           </NavLink>
 
