@@ -127,52 +127,52 @@ const AboutPage = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="bg-gradient-to-br from-orange-50 to-white p-6 rounded-lg shadow-md border border-orange-100 hover:shadow-lg transition-shadow">
-              <div className="flex items-center justify-between">
-                <h3 className="text-lg font-semibold text-gray-800">一級建築士</h3>
-                <div className="bg-orange-500 text-white rounded-full w-12 h-12 flex items-center justify-center text-xl font-bold">2名</div>
+            <div className="bg-gradient-to-br from-orange-50 to-white p-4 sm:p-6 rounded-lg shadow-md border border-orange-100 hover:shadow-lg transition-shadow">
+              <div className="flex items-center justify-between gap-3">
+                <h3 className="text-base sm:text-lg font-semibold text-gray-800">一級建築士</h3>
+                <div className="bg-orange-500 text-white rounded-full w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center text-lg sm:text-xl font-bold flex-shrink-0">2名</div>
               </div>
             </div>
 
-            <div className="bg-gradient-to-br from-orange-50 to-white p-6 rounded-lg shadow-md border border-orange-100 hover:shadow-lg transition-shadow">
-              <div className="flex items-center justify-between">
-                <h3 className="text-lg font-semibold text-gray-800">構造設計一級建築士</h3>
-                <div className="bg-orange-500 text-white rounded-full w-12 h-12 flex items-center justify-center text-xl font-bold">1名</div>
+            <div className="bg-gradient-to-br from-orange-50 to-white p-4 sm:p-6 rounded-lg shadow-md border border-orange-100 hover:shadow-lg transition-shadow">
+              <div className="flex items-center justify-between gap-3">
+                <h3 className="text-base sm:text-lg font-semibold text-gray-800">構造設計一級建築士</h3>
+                <div className="bg-orange-500 text-white rounded-full w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center text-lg sm:text-xl font-bold flex-shrink-0">1名</div>
               </div>
             </div>
 
-            <div className="bg-gradient-to-br from-orange-50 to-white p-6 rounded-lg shadow-md border border-orange-100 hover:shadow-lg transition-shadow">
-              <div className="flex items-center justify-between">
-                <h3 className="text-lg font-semibold text-gray-800">構造計算適合性判定資格者</h3>
-                <div className="bg-orange-500 text-white rounded-full w-12 h-12 flex items-center justify-center text-xl font-bold">1名</div>
+            <div className="bg-gradient-to-br from-orange-50 to-white p-4 sm:p-6 rounded-lg shadow-md border border-orange-100 hover:shadow-lg transition-shadow">
+              <div className="flex items-center justify-between gap-3">
+                <h3 className="text-base sm:text-lg font-semibold text-gray-800">構造計算適合性判定資格者</h3>
+                <div className="bg-orange-500 text-white rounded-full w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center text-lg sm:text-xl font-bold flex-shrink-0">1名</div>
               </div>
             </div>
 
-            <div className="bg-gradient-to-br from-orange-50 to-white p-6 rounded-lg shadow-md border border-orange-100 hover:shadow-lg transition-shadow">
-              <div className="flex items-center justify-between">
-                <h3 className="text-lg font-semibold text-gray-800">JSCA建築構造士</h3>
-                <div className="bg-orange-500 text-white rounded-full w-12 h-12 flex items-center justify-center text-xl font-bold">1名</div>
+            <div className="bg-gradient-to-br from-orange-50 to-white p-4 sm:p-6 rounded-lg shadow-md border border-orange-100 hover:shadow-lg transition-shadow">
+              <div className="flex items-center justify-between gap-3">
+                <h3 className="text-base sm:text-lg font-semibold text-gray-800">JSCA建築構造士</h3>
+                <div className="bg-orange-500 text-white rounded-full w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center text-lg sm:text-xl font-bold flex-shrink-0">1名</div>
               </div>
             </div>
 
-            <div className="bg-gradient-to-br from-orange-50 to-white p-6 rounded-lg shadow-md border border-orange-100 hover:shadow-lg transition-shadow">
-              <div className="flex items-center justify-between">
-                <h3 className="text-lg font-semibold text-gray-800">建築積算士</h3>
-                <div className="bg-orange-500 text-white rounded-full w-12 h-12 flex items-center justify-center text-xl font-bold">1名</div>
+            <div className="bg-gradient-to-br from-orange-50 to-white p-4 sm:p-6 rounded-lg shadow-md border border-orange-100 hover:shadow-lg transition-shadow">
+              <div className="flex items-center justify-between gap-3">
+                <h3 className="text-base sm:text-lg font-semibold text-gray-800">建築積算士</h3>
+                <div className="bg-orange-500 text-white rounded-full w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center text-lg sm:text-xl font-bold flex-shrink-0">1名</div>
               </div>
             </div>
 
-            <div className="bg-gradient-to-br from-orange-50 to-white p-6 rounded-lg shadow-md border border-orange-100 hover:shadow-lg transition-shadow">
-              <div className="flex items-center justify-between">
-                <h3 className="text-lg font-semibold text-gray-800">応急危険度判定士</h3>
-                <div className="bg-orange-500 text-white rounded-full w-12 h-12 flex items-center justify-center text-xl font-bold">2名</div>
+            <div className="bg-gradient-to-br from-orange-50 to-white p-4 sm:p-6 rounded-lg shadow-md border border-orange-100 hover:shadow-lg transition-shadow">
+              <div className="flex items-center justify-between gap-3">
+                <h3 className="text-base sm:text-lg font-semibold text-gray-800">応急危険度判定士</h3>
+                <div className="bg-orange-500 text-white rounded-full w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center text-lg sm:text-xl font-bold flex-shrink-0">2名</div>
               </div>
             </div>
 
-            <div className="bg-gradient-to-br from-orange-50 to-white p-6 rounded-lg shadow-md border border-orange-100 hover:shadow-lg transition-shadow">
-              <div className="flex items-center justify-between">
-                <h3 className="text-lg font-semibold text-gray-800">震災建築物被災度区分判定・復旧技術者</h3>
-                <div className="bg-orange-500 text-white rounded-full w-12 h-12 flex items-center justify-center text-xl font-bold">1名</div>
+            <div className="bg-gradient-to-br from-orange-50 to-white p-4 sm:p-6 rounded-lg shadow-md border border-orange-100 hover:shadow-lg transition-shadow">
+              <div className="flex items-center justify-between gap-3">
+                <h3 className="text-base sm:text-lg font-semibold text-gray-800">震災建築物被災度区分判定・復旧技術者</h3>
+                <div className="bg-orange-500 text-white rounded-full w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center text-lg sm:text-xl font-bold flex-shrink-0">1名</div>
               </div>
             </div>
           </div>
